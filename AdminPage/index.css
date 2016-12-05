@@ -1,0 +1,33 @@
+.divPadding {
+	padding: 25px;
+}
+
+.centertext {
+	text-align: center;
+}
+
+.greyback {
+	background-color: #F1F1F1;
+}
+
+.pinkback {
+	background-color: #E2EFF0;
+}
+
+.bordered {
+	border: 2px solid black;
+}
+
+.row-right {
+	text-align:right;
+}
+
+.row-left {
+	text-align:left;
+}
+
+.valign {
+	position: relative;
+	top: 50%;
+	transform: translateY(50%);
+}
