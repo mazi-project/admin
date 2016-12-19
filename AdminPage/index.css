@@ -2,6 +2,12 @@
 	padding: 25px;
 }
 
+.smallPadding
+{
+	 padding: 10px;
+	 margin: 10px;
+}
+
 .centertext {
 	text-align: center;
 }
@@ -26,8 +32,19 @@
 	text-align:left;
 }
 
+.row-center {
+	text-align:center;
+}
+
 .valign {
 	position: relative;
 	top: 50%;
-	transform: translateY(50%);
+	transform: translateY(-50%);
+}
+
+.redbox
+{
+	text-align:center;
+	background-color: #E99C9E;
+	margin-bottom:5px;
 }

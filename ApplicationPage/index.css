@@ -1,0 +1,40 @@
+.divPadding {
+	padding: 25px;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.centertext {
+	text-align: center;
+}
+
+.centerbox {
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+}
+
+.greyback {
+	background-color: #F1F1F1;
+}
+
+.bordered {
+	border: 1px solid black;
+}
+
+td {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+.redbox {
+	text-align: center;
+	background-color: #E99C9E;
+	margin-bottom: 5px;
+}

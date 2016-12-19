@@ -1,0 +1,79 @@
+@CHARSET "ISO-8859-1";
+/* Set gray background color and 100% height */
+.sidenav {
+	padding-top: 20px;
+	background-color: #f1f1f1;
+	height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+	background-color: #555;
+	color: white;
+	padding: 15px;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+	height: 450px
+}
+
+.divPadding {
+	padding: 25px;
+}
+
+.navbar-center {
+	float: none;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	text-align: center;
+	margin: auto;
+	height: 100%;
+}
+
+.left{
+	text-align: left;
+}
+
+.right
+{
+	text-align: right;
+}
+
+.centertext {
+    text-align: center;
+}
+
+.centerbox {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.greyback
+{
+	background-color:#F1F1F1;
+}
+
+.orangeback
+{
+	background-color:orange
+}
+
+.lightorange
+{
+	background-color:lightorange
+}
+
+.bordered
+{
+	    border: 3px solid grey;
+}
+
+.appBtn
+{
+	margin: auto;
+	padding:10px;
+}
