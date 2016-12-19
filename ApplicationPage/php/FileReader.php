@@ -18,6 +18,8 @@ namespace MaziApplication
 	 */
 	function loadApplications ()
 	{
+		//Run if the first application record is empty
+		if($applications[0][0] == "")
 		try
 		{
 			global $applications;
@@ -67,7 +69,7 @@ namespace MaziApplication
 		return $applications[$id];
 	}
 
-	//Log an error
+	//Log an error to text file
 	function outputError ($message)
 	{
 		echo ($message);

@@ -24,15 +24,12 @@
 	border: 2px solid black;
 }
 
-.row-right {
-	text-align:right;
-}
 
-.row-left {
+.left {
 	text-align:left;
 }
 
-.row-center {
+.center {
 	text-align:center;
 }
 

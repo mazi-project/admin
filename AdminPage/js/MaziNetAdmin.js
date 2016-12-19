@@ -72,6 +72,7 @@ $(document).ready(function()
 				}
 
 				//So well automated the user doesn't even have to input the 6
+				//This will instead be implemented in advanced settings
 				var channel = 6;
 				/*
 				var channel = $("#txtChannel").val();
