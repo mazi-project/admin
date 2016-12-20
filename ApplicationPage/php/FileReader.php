@@ -18,12 +18,12 @@ namespace MaziApplication
 	 */
 	function loadApplications ()
 	{
+		global $applications;
+		
 		//Run if the first application record is empty
 		if($applications[0][0] == "")
 		try
 		{
-			global $applications;
-			
 			$file = fopen("../db/applications.csv", "r");
 			
 			while (! feof($file))

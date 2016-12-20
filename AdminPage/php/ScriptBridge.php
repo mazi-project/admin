@@ -24,6 +24,10 @@ namespace MaziAdmin
 	 * */
 	function saveSettings($hostname, $channel, $passkey)
 	{
+		global $STATUS_SUCESS;
+		global $path;
+		global $NULLREDIRECT;
+		
 		//Variable for building arguemrnts in
 		$arguements;
 		if($passkey != null)
@@ -66,6 +70,10 @@ namespace MaziAdmin
 	 * and runs it in the script - it assumes the arguement has already been checked*/
 	function changeNetmode($netmode)
 	{
+		global $STATUS_SUCESS;
+		global $path;
+		global $REDIRECT;
+		
 		$scriptPath = ($path . '/internet.sh');
 		$arguements = (' -m ' . $netmode);
 		$script = ('sudo sh ' . $scriptPath . $arguements . $REDIRECT);
@@ -93,6 +101,10 @@ namespace MaziAdmin
 	 * */
 	function getCurrentSettings($host, $pass, $netmode, $channel, $interface)
 	{
+		global $STATUS_SUCESS;
+		global $path;
+		global $REDIRECT;
+		
 		$scriptPath = ($path . '/current.sh');
 		
 		//Build requested arguement list based on inputs
