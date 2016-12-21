@@ -23,3 +23,8 @@ This page allows the administrator to select which applications will show on the
 
 The applications which are available should be recorded in applications.csv
 in the /db folder in the format name, hyperlink
+
+On page generation, the templates header.html and footer.html are combined,
+with each chosen application embedded between them as a formatted link. They are then saved as splash.html
+
+php MUST have write access to splash.html in the /applicationpage folder

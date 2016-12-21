@@ -2,7 +2,7 @@
 /*
  * This file controls the loading and saving of external files
  */
-namespace MaziApplication
+namespace MaziAdmin\applications
 {
 	
 	// This is made global so that different functions in this file can access the list of
@@ -20,8 +20,6 @@ namespace MaziApplication
 	{
 		global $applications;
 		
-		//Run if the first application record is empty
-		if($applications[0][0] == "")
 		try
 		{
 			$file = fopen("../db/applications.csv", "r");

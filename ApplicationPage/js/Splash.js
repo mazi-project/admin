@@ -2,18 +2,11 @@
  * Links the web page to the PHP functions
  */
 
-var path = "./php/NetAdmin.php?request=";
+var path = "./php/AppAdmin.php?request=";
 
 $(document).ready(function()
 		{
 	loadVals();
-
-	//Colect inputs, send to Php page for generation
-	$("#btnGenerate").click(
-			function()
-			{
-
-			});
 		});
 
 
@@ -25,20 +18,28 @@ function loadVals()
 			{
 		var values = JSON.parse(data);
 
-		//Update tracked setting, removing the names from the values
-		var actualHostname = values[0].replace("ssid", "").trim();
-		var actualNetmode = values[2].replace("mode", "").trim();
-
-		//no check on this one, it probably isn't THAT shocking
-		document.getElementById('txtHostname').value = actualHostname;
-
-		if(actualNetmode != "")
+		if(values[0] != null)
 		{
-			if(actualNetmode == "dual")
+			//Update tracked setting, removing the names from the values
+			var actualHostname = values[0].replace("ssid", "").trim();
+
+			//no check on this one, it probably isn't THAT shocking
+			document.getElementById('txtHostname').innerHTML = actualHostname;
+		}
+
+
+		if (values[1] != null)
+		{
+			var actualNetmode = values[1].replace("mode", "").trim();
+
+			if(actualNetmode != "")
 			{
-			}
-			else if(actualNetmode == "restricted")
-			{
+				if(actualNetmode == "dual")
+				{
+				}
+				else if(actualNetmode == "restricted")
+				{
+				}
 			}
 		}
 

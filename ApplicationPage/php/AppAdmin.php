@@ -3,12 +3,12 @@
  * This file forwards requests and input for the application admin page
  *
  */
-namespace MaziApplication
+namespace MaziAdmin\applications
 {
 
 	include_once './PageGeneration.php';
 	include_once './FileReader.php';
-	include_once '../../AdminPage/php/ScriptBridge.php';
+	include_once './ScriptBridge.php';
 	
 	// This if statement ensures that the applications
 	// are actually available and loads them from the .csv.
@@ -39,10 +39,10 @@ namespace MaziApplication
 		}
 		
 		// Return the current values of each setting
-		elseif ($request == "current")
+		else if ($request == "current")
 		{
 			// Get only the hostname
-			exit(getCurrentSettings(true, false, false, false, false));
+			exit(\MaziAdmin\settings\getCurrentSettings(true, false, true, false, false));
 		}
 		
 		// Request for a list of available applications

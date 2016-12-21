@@ -1,13 +1,13 @@
 <?php
 /*
  * This file processes requests from the System admin config page
- * If the inputs for the request are valid, they are passed to the script Bridge for excecution
+ * If the inputs for the request are valid, they are passed to the script Bridge
+ * for excecution
  * If not, the file will output a server error and exit
  * R. McLean
  */
-namespace MaziAdmin
+namespace MaziAdmin\settings
 {
-
 	header('Content-Type: text/html; charset=utf-8');
 	
 	include_once './ScriptBridge.php';
@@ -16,7 +16,7 @@ namespace MaziAdmin
 	
 	// Wifi Settings
 	if ($request == 'save')
-	{		
+	{
 		// Hostname must simply not be blank
 		$hostname = $_REQUEST['hostname'];
 		if ($hostname == "")
@@ -44,41 +44,40 @@ namespace MaziAdmin
 				exit("Invalid Passkey");
 			}
 			
-			//All checks passed, security on - send inputs to script
+			// All checks passed, security on - send inputs to script
 			exit(saveSettings($hostname, $channel, $passkey));
-		}
-		else
+		} else
 		{
-			//all checks passed, security off - send inputs to script
+			// all checks passed, security off - send inputs to script
 			exit(saveSettings($hostname, $channel, null));
 		}
-	}
-	
+	}	
+
 	// Change Network Mode
 	elseif ($request == 'netmode')
 	{
 		$netmode = $_REQUEST['netmode'];
 		
 		// Check it's actually in the correct format
-		if ($netmode == "offline" || $netmode == "dual" || $netmode == "restricted")
+		if ($netmode == "offline" || $netmode == "dual" ||
+				 $netmode == "restricted")
 		{
 			exit(changeNetmode($netmode));
-		}
-		else
+		} else
 		{
 			// Incorrect format, just exit
 			header('HTTP/1.1 500 Internal Server Error');
 			exit("Invalid Netmode Input");
 		}
-	}
-	
+	}	
+
 	// Return the current values of each setting
 	elseif ($request == "current")
 	{
-		//No inputs needed
+		// No inputs needed
 		exit(getCurrentSettings(true, true, true, false, false));
-	}
-	
+	} 	
+
 	// Catch all for invalid requests
 	else
 	{
@@ -87,7 +86,7 @@ namespace MaziAdmin
 	}
 	
 	// Output errors to the log
-	function outputError($message)
+	function outputError ($message)
 	{
 		echo ($message);
 		file_put_contents('./log/err.log', $message, FILE_APPEND);
@@ -101,7 +100,7 @@ namespace MaziAdmin
 	 * @return bool TRUE if any character creates some sort of whitespace;
 	 *         otherwise, FALSE.
 	 */
-	function hasWhitespace($text)
+	function hasWhitespace ($text)
 	{
 		for ($idx = 0; $idx < strlen($text); $idx += 1)
 			if (ctype_space($text[$idx]))
