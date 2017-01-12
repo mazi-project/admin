@@ -1,0 +1,33 @@
+@CHARSET "ISO-8859-1";
+
+.left {
+	text-align:left;
+}
+
+.center {
+	text-align:center;
+}
+
+.divPadding {
+	padding: 25px;
+}
+
+.smallPadding
+{
+	 padding: 10px;
+	 margin: 10px;
+}
+
+.redbox
+{
+	text-align:center;
+	background-color: #E99C9E;
+	margin-bottom:5px;
+}
+
+.valign {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+

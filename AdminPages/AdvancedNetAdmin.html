@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<!-- Bootstrap Compatibility fields -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<Title>MAZI Admin</Title>
+
+<!-- Bootstrap core CSS -->
+<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Production JQuerey -->
+<script src="./js/jquery-2.2.1.min.js"></script>
+
+<!-- Javascript functionality -->
+<script src="./js/MaziAdvNetAdmin.js"></script>
+
+<link href="./styles/Common.css" rel="stylesheet">
+
+<link href="./styles/ColourDefault.css" rel="stylesheet" title="colourDef">
+<link href="./styles/ColourHC.css" rel="alternate stylesheet" title="colourHC">
+
+<link href="./styles/AdvancedNetAdmin.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container greyback center" id="divMainContainer">
+		<h2>Mazi Zone Advanced Network Settings</h2>
+		<br>
+
+		<div class="bordered pinkback">
+			<div class="row">
+				<div class="col-md-6 center">
+					<h4>Choose the channel for your wireless network</h4>
+					<h5>This will be the Wifi channel it transmits on</h5>
+				</div>
+				<div class="col-md-6">
+					<input id="txtChannel" class="smallPadding" type="text"> <br>
+				</div>
+			</div>
+		</div>
+
+		<!-- 
+		<div class="bordered pinkback">
+			<div class="row">
+				<div class="col-md-6 center">
+					<h4>Select an Interface</h4>
+					<h5>The network interface to be used</h5>
+				</div>
+				<div class="col-md-6">
+					<input id="txtInterface" class="smallPadding" type="text">
+				</div>
+			</div>
+		</div>
+		-->
+		<button id="btnSave" class="btn btn-primary smallPadding">Save Settings</button>
+
+		<a href="./NetAdmin.html" class="btn btn-primary smallPadding">Back to network admin</a> <br>
+
+	</div>
+	<br>
+
+
+	<br>
+	<br>
+	<div id="divError" class="redbox"></div>
+
+	<div class="divPadding"></div>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
