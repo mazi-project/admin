@@ -19,97 +19,130 @@
 
 <link href="./styles/Common.css" rel="stylesheet">
 
-<link href="./styles/ColourDefault.css" rel="stylesheet" title="colourDef">
-<link href="./styles/ColourHC.css" rel="alternate stylesheet" title="colourHC">
+<link href="./styles/ColourDefault.css" rel="stylesheet"
+	title="colourDef">
+<link href="./styles/ColourHC.css" rel="alternate stylesheet"
+	title="colourHC">
 
 <link href="./styles/NetAdmin.css" rel="stylesheet">
 </head>
 
-<body>
-	<div class="container greyback center" id="divMainContainer">
-		<h2>Mazi Zone Network Settings</h2>
+<body class="darkBackground">
+	<div class="container darkBackground center" id="divMainContainer">
+		<img class="maziLogo" src="./images/MAZI_white.png" alt="Mazi Logo">
+		<h2 class="whiteText arBlack">Mazi Zone Network Settings</h2>
 		<br>
 
-		<div class="bordered pinkback">
-			<div class="row">
-				<div class="col-md-6 center">
-					<h4>Choose the name for your wireless network (SSID)</h4>
-					<h5>This will be visible to the Public</h5>
+		<div id="settingsContainer">
+			<div class="lightGreyback">
+				<div class="row">
+					<div class="col-md-6 right">
+						<h4>Choose the name for your wireless network (SSID)</h4>
+						<h5>This will be visible to the Public</h5>
+					</div>
+					<div class="col-md-6 left">
+						<input id="txtHostname" class="smallPadding" type="text">
+						<br>
+					</div>
 				</div>
-				<div class="col-md-6">
-					<input id="txtHostname" class="smallPadding" type="text"> <br>
+			</div>
+
+			<div class="lightGreyback">
+				<div class="row centered">
+					<div class="col-md-6 right">
+						<h4>Enable WPA Security</h4>
+						<h5>This requires visitors to input a password to connect to
+							the network</h5>
+					</div>
+
+					<div class="col-md-6 left">
+						<form action="" class="smallPadding">
+							<input id="rdoSecOn" type="radio" name="rdoSecurity" value="true"
+								checked> Yes <br> <input id="rdoSecOff"
+								type="radio" name="rdoSecurity" value="false"> No <br>
+						</form>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 right">
+						<h4>Select a password</h4>
+						<h5>For visitors connecting to the network</h5>
+					</div>
+					<div class="col-md-6 left">
+						<input id="txtPasskey" class="smallPadding" type="text">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6"></div>
+					<div class="col-md-6">
+						<button id="btnSave" class="btn btn-primary smallPadding">Save
+							Settings</button>
+					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="bordered pinkback">
-			<div class="row centered">
-				<div class="col-md-6 center">
-					<h4>Enable WPA Security</h4>
-					<h5>This requires visitors to input a password to connect to
-						the network</h5>
-				</div>
-
-				<div class="col-md-6">
-					<form action="" class="smallPadding">
-						<input id="rdoSecOn" type="radio" name="rdoSecurity" value="true"
-							checked> Yes <br> <input id="rdoSecOff" type="radio"
-							name="rdoSecurity" value="false"> No <br>
-					</form>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-6 center">
-					<h4>Select a password</h4>
-					<h5>For visitors connecting to the network</h5>
-				</div>
-				<div class="col-md-6">
-					<input id="txtPasskey" class="smallPadding" type="text">
-				</div>
-			</div>
-		</div>
-
-		<br>
-
-		<button id="btnSave" class="btn btn-primary">Save Settings</button>
-
-		<br>
-		<br>
 		<div id="divError" class="redbox"></div>
 
-		<div class="bordered pinkback">
-			<h3>Network Connection Mode</h3>
-			<div class="row">
-				<div class="col-md-6">
-					<form action="">
-						<input id="rdoNetOffline" type="radio" name="rdoNetmode"
-							value="offline" checked> <b>Offline</b>
+		<div id="netmodeContainer">
+			<div class="lightGreyback">
+				<h3 class="smallPadding">Network Connection Mode</h3>
+
+				<div class="row">
+					<div class="col-md-6 right">
+						<form action="">
+							<b>Offline</b> <input id="rdoNetOffline" type="radio"
+								name="rdoNetmode" value="offline" checked>
+						</form>
+					</div>
+					<div class="col-md-6 left">
 						<h5>Local zone only, no internet access for visitors</h5>
-						<br> <input id="rdoNetOnline" type="radio" name="rdoNetmode"
-							value="online"> <b>Online</b>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 right">
+						<form action="">
+							<b>Online</b> <input id="rdoNetOnline" type="radio"
+								name="rdoNetmode" value="online">
+						</form>
+					</div>
+					<div class="col-md-6 left">
 						<h5>Internet access only for visitors</h5>
-						<br> <input id="rdoNetDual" type="radio"
-							name="rdoNetmode" value="dual"> <b>Dual</b>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 right">
+						<form action="">
+							<b>Dual</b> <input id="rdoNetDual" type="radio" name="rdoNetmode"
+								value="dual">
+						</form>
+					</div>
+					<div class="col-md-6 left">
 						<h5>Local zone and internet access for visitors</h5>
-					</form>
+					</div>
 				</div>
-				<div class="col-md-6">
-					<br>
-					<br>
-					<button id="btnChangeNetmode" class="btn btn-primary valign">Set
-						Network Mode</button>
+				<div class="row">
+					<div class="col-md-6"></div>
+					<div class="col-md-6">
+						<button id="btnChangeNetmode" class="btn btn-primary smallPadding">Set
+							Network Mode</button>
+					</div>
 				</div>
+
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-6">
-				<a href="./AdvancedNetAdmin.html" class="btn btn-primary smallPadding">Go to advanced network
+				<a href="./AdvancedNetAdmin.html"
+					class="btn btn-primary smallPadding">Go to advanced network
 					settings</a> <br>
 			</div>
 			<div class="col-md-6">
-				<a href="./ApplicationAdmin.html" class="btn btn-primary smallPadding">Setup applications for
+				<a href="./ApplicationAdmin.html"
+					class="btn btn-primary smallPadding">Setup applications for
 					local Mazizone</a>
 			</div>
 		</div>

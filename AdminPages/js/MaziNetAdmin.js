@@ -188,7 +188,7 @@ function loadCurrentVals()
 		$("#divError").text("");
 			})
 			.fail(function(data){
-				$("#divError").text("Current could not be loaded");
+				$("#divError").text("Current Settings could not be loaded. Error Has been logged.");
 				console.log(data);
 				//alert("Error");	
 			});

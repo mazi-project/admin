@@ -1,9 +1,19 @@
 @CHARSET "ISO-8859-1";
 
+.darkBackground
+{
+	background-color: rgb(8, 70, 105);
+}
+
+.whiteText
+{
+	color: White;
+}
+
 .greyback {
 	background-color: #F1F1F1;
 }
 
-.pinkback {
+.lightGreyback {
 	background-color: #E2EFF0;
 }

@@ -4,4 +4,16 @@
 	border: 2px solid black;
 }
 
+.arBold {
+	font-family: "Arial Rounded MT Bold", Helvetica Rounded, Arial,
+		sans-serif;
+	font-style: normal;
+	font-variant: normal;
+}
 
+.arBlack {
+	font-family: Arial Black, Arial Bold, Gadget, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-size:1.5em;
+}

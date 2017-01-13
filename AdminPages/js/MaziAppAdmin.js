@@ -81,9 +81,10 @@ function loadApplications()
 			cellDesc.appendChild(description);// add the description to the element
 				}
 		);
+		$("#divError").text("");
 			})
 			.fail(function(data){
-				alert("Error");
+				$("#divError").text("Error Loading Applications. Please check that applications.csv is present in the 'db' folder.");
 				console.log(data);
 			});
 }

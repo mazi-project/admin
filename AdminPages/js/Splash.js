@@ -36,9 +36,15 @@ function loadVals()
 			{
 				if(actualNetmode == "dual")
 				{
+					//load everything normaly
 				}
-				else if(actualNetmode == "restricted")
+				else if(actualNetmode == "online")
 				{
+					//Show only internet button
+				}
+				else if(actualNetmode == "offline")
+				{
+					//Show only app buttons
 				}
 			}
 		}
@@ -46,6 +52,7 @@ function loadVals()
 		$("#divError").text("");
 			})
 			.fail(function(data){
+				$("#divError").text("Some items could not be loaded, Please try again later ");
 				console.log(data);
 			});
 };

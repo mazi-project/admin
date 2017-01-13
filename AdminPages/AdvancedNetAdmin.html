@@ -19,31 +19,35 @@
 
 <link href="./styles/Common.css" rel="stylesheet">
 
-<link href="./styles/ColourDefault.css" rel="stylesheet" title="colourDef">
-<link href="./styles/ColourHC.css" rel="alternate stylesheet" title="colourHC">
+<link href="./styles/ColourDefault.css" rel="stylesheet"
+	title="colourDef">
+<link href="./styles/ColourHC.css" rel="alternate stylesheet"
+	title="colourHC">
 
 <link href="./styles/AdvancedNetAdmin.css" rel="stylesheet">
 </head>
 
-<body>
-	<div class="container greyback center" id="divMainContainer">
-		<h2>Mazi Zone Advanced Network Settings</h2>
-		<br>
+<body class="darkBackground">
+	<div class="container darkBackground center" id="divMainContainer">
 
-		<div class="bordered pinkback">
-			<div class="row">
-				<div class="col-md-6 center">
-					<h4>Choose the channel for your wireless network</h4>
-					<h5>This will be the Wifi channel it transmits on</h5>
-				</div>
-				<div class="col-md-6">
-					<input id="txtChannel" class="smallPadding" type="text"> <br>
+		<img class="maziLogo" src="./images/MAZI_white.png" alt="Mazi Logo">
+		<h2 class="whiteText arBlack">Mazi Zone Advanced Network Settings</h2>
+		<br>
+		<div id="settingsContainer lightGreyback">
+			<div class="lightGreyback">
+				<div class="row">
+					<div class="col-md-6 center">
+						<h4>Choose the channel for your wireless network</h4>
+						<h5>This will be the Wifi channel it transmits on</h5>
+					</div>
+					<div class="col-md-6">
+						<input id="txtChannel" class="smallPadding" type="text"> <br>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<!-- 
-		<div class="bordered pinkback">
+			<!-- 
+		<div class="lightGreyback">
 			<div class="row">
 				<div class="col-md-6 center">
 					<h4>Select an Interface</h4>
@@ -55,9 +59,12 @@
 			</div>
 		</div>
 		-->
-		<button id="btnSave" class="btn btn-primary smallPadding">Save Settings</button>
+		</div>
+		<button id="btnSave" class="btn btn-primary smallPadding">Save
+			Settings</button>
 
-		<a href="./NetAdmin.html" class="btn btn-primary smallPadding">Back to network admin</a> <br>
+		<a href="./NetAdmin.html" class="btn btn-primary smallPadding">Back
+			to network admin</a> <br>
 
 	</div>
 	<br>
