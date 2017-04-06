@@ -1,4 +1,4 @@
-# admin
+# [DEPRECATED] admin
 This is the OLD admin interface of the MAZI toolkit.
 
 Please use the new portal for the MAZI toolkit https://github.com/mazi-project/portal
